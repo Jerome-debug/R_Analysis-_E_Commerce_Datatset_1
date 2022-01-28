@@ -8,27 +8,12 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-
-
-```
-
-```{R}
-
- install.packages("tidyverse")
- install.packages("ggplot2")
  library(ggplot2)
  library(tidyverse) 
 
 
 ```
 
-```{r}
-ggplot(data = NULL, mapping = aes()) + geom_function()
-
-library(ggplot2)
-
-
-```
 
 ###Exploratory Data Analysis
 
@@ -55,7 +40,7 @@ e)  Data Relevance
 ###Loading Our Datatset
 
 ```{R}
-install.packages("data.table")
+
 library("data.table")
 
 
@@ -322,7 +307,7 @@ is.factor(factor_data)
 
 ```{R}
 
-# Fetching the school column
+# Fetching the county column
 # ---
 # 
 Country <- advertising$Country
@@ -355,7 +340,7 @@ People between the age 40 and below spend much time on the sites While people ag
 
 ```{R}
 
-#create scatterplot of hours studied vs. exam score
+#create scatterplot of Daily Internet Usage vs. Time spent on site 
 plot(advertising$`Daily Internet Usage`, advertising$`Daily Time Spent on Site`, pch=16, col='steelblue',
      main=' Daily Internet Usage vs. Daily Time spent on site',
      xlab='Daily Internet Usage', ylab='Daily Time spent on site')
@@ -398,14 +383,14 @@ plot( advertising$`Daily Internet Usage`,advertising$Age, xlab = "Daily time Spe
 People aged 30 and below have high internet usage
 
 ```{R}
-#calculate correlation between Ads clickrf and Daily internet Usage
+#calculate correlation between Ads Clicked on Ads and Daily internet Usage
 cor(advertising$`Clicked on Ad`, advertising$`Daily Internet Usage`)
 
 
 
 ```
 
-There is a  negative correlation between the Daily internt usage and those indivuduals that click on Ads
+There is a  negative correlation between the Daily internt usage and those individuals that click on Ads
 
 ```{R}
 #calculate correlation between Ads clicked and Daily Time spent on site
@@ -415,23 +400,31 @@ cor(advertising$`Clicked on Ad`, advertising$`Daily Time Spent on Site`)
 
 ```
 
-There is a  negative correlation between the Daily itime spent on sites and those indivuduals that click on Ads
+There is a  negative correlation between the Daily time spent on sites and those individuals that click on Ads
 
 
 
 
 
-###Conclusions 1 Equal Number of Clicks on Ads and Non clicks
+###Conclusions
+1 Equal Number of Clicks on Ads and Non clicks
 
-2 There are more females to males in the sites,where 1 is Male,0 is Female 3 The youngest Age is 19 and the Oldest age in the website cleint is 61
+2 There are more females to males in the sites,where 1 is Male,0 is Female
+
+3 The youngest Age is 19 and the Oldest age in the website client is 61
 
 4 Minimum Age is 19 Maximum age is 61 
+
 5 Highest Age frequency is from the people in age 31,followed by,37,28,29
 
 6 Most people earn between 40,000 and 75,000 Very few people earn over 75,000 and below 35,000 
-7 Dail internet Usage lies between the 150th and 220th Mark ##Checking the Variable Male 
+
+7 Daily internet Usage lies between the 150th and 220th Mark ##Checking the Variable Male 
+
 8 People between the age 40 and below spend much time on the sites While people aged 50 and above spend less time on sites 
+
 9 People with high daily internet usage spend higher time on sites 
+
 10 People with high Area income are aged between 30 and Above
 
 11 People with High area income spend more time on sites
@@ -441,9 +434,9 @@ There is a  negative correlation between the Daily itime spent on sites and thos
 ###Recommendatations
 1 Focus ad traffic to users aged 30 and below as they have high internet usage
 
-2 Foucs on sending ads to individuals with high income as they spend more time on the sites
+2 Focus on sending ads to individuals with high income as they spend more time on the sites
 
-3 Send more ads to clients with high internet usage as theyre more likely to see the ads compared to the ones with less internet usaged
+3 Send more ads to clients with high internet usage as theyre more likely to see the ads compared to the ones with less internet usage
 
 4 People aged 40 are a good client market for the ads because they alot of time on the sites
 
